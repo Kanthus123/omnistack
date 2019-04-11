@@ -19,7 +19,7 @@ mongoose.connect('mongodb+srv://Kanthus:deidara10@estudonodejs-mevxq.mongodb.net
     }
 );
 
-app.use((req, res) => {
+app.use((req, res, next) => {
     req.io = io; //toda rota que for chamada tera acesso ao IO
 
     return next(); //retornar next permite que o programa consiga prosseguir em suas requisições
